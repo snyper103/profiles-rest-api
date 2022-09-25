@@ -27,5 +27,6 @@ router.register('profile', views.UserProfileViewSet)    # Don't need to specify 
 
 urlpatterns = [
     path('hello-apiview/', views.HelloAPIView.as_view()),
+    path('login/', views.UserLoginAPIView.as_view()),
     path('', include(router.urls))
 ]
