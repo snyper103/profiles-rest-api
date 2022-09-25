@@ -22,6 +22,8 @@ from profiles_api import views
 
 router = DefaultRouter()
 router.register('hello-viewset', views.HelloViewSet, base_name='hello-viewset')
+router.register('profile', views.UserProfileViewSet)    # Don't need to specify a base name, beacuse its using a queryset, 
+                                                        # so Django REST freamework cand figure it out the name from the model that is assinged to it.
 
 urlpatterns = [
     path('hello-apiview/', views.HelloAPIView.as_view()),
